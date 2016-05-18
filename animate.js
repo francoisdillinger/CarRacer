@@ -1,6 +1,11 @@
 $(document).ready(function(){
     
-    var checkIfComplete = function(){
+    
+    
+    
+    $('#go').on('click', function(){
+        
+        var checkIfComplete = function(){
         if(isComplete == false){
             isComplete == true;
         }
@@ -8,19 +13,17 @@ $(document).ready(function(){
             place = 'second';
         }
     }
+        
+        var carWidth = $('#car1').width();
     
-    var carWidth = $('#car1').width();
-    
-    var raceTrackWidth = $(window).width() - carWidth;
-    
-    var raceTime1 = Math.floor((Math.random() * 5000) + 1);
-    var raceTime2 = Math.floor((Math.random() * 5000) + 1);
-    
-    var isComplete = false;
-    
-    var place = 'first';
-    
-    $('#go').on('click', function(){
+        var raceTrackWidth = $(window).width() - carWidth;
+        
+        var raceTime1 = Math.floor((Math.random() * 5000) + 1);
+        var raceTime2 = Math.floor((Math.random() * 5000) + 1);
+        
+        var isComplete = false;
+        
+        var place = 'first';
 
     $('#car1').animate({
         left: raceTrackWidth
