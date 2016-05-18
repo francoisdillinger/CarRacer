@@ -111,7 +111,7 @@ input#reset {
     background: #fc3;
     color: #444;
 }
-
+/*Making sure the floats are cleared*/
 .clearfix:after {
     content:"";
     display: table;
