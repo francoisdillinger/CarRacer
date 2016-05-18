@@ -1,7 +1,5 @@
 $(document).ready(function(){
     
-    $('#go').click(function(){
-    
     var checkIfComplete = function(){
         if(isComplete == false){
             isComplete == true;
@@ -22,6 +20,8 @@ $(document).ready(function(){
     
     var place = 'first';
     
+    $('#go').on('click', function(){
+
     $('#car1').animate({
         left: raceTrackWidth
     },raceTime1, function(){
@@ -35,10 +35,10 @@ $(document).ready(function(){
         checkIfComplete();
         $('#raceInfo2 span').text('Finished in '+ place + ' place and clocked in at ' + raceTime2 + ' milliseconds!')
     });
-})
+});
 
-    $('#reset').click(function(){
+    $('#reset').on('click', function(){
         $('.car').css('left', '0');
         $('.raceInfo span').text('');
-    })
+    });
 })
